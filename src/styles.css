@@ -70,6 +70,7 @@ button { color: inherit; font: inherit; }
 .card--experience .card-eyebrow { font-size: 10px; font-weight: 600; }
 .card-meta { color: var(--soft-muted); flex-shrink: 0; text-align: right; }
 .card h3 { font-size: 21px; font-weight: 600; letter-spacing: -.05em; line-height: 1.1; margin: 26px 0 16px; }
+.card-content > h3:first-child { margin-top: 8px; }
 .card-description { color: var(--muted); font-size: 12px; line-height: 1.7; margin: 0; max-width: 370px; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
 .tag { border: 1px solid var(--line); color: #68655e; font-family: 'DM Mono', monospace; font-size: 9px; padding: 7px 9px; }

@@ -16,24 +16,25 @@ export function TagList({ items, className = '' }: { items: string[]; className?
 
 type CardProps = {
   image?: string
-  eyebrow: string
+  eyebrow?: string
   title: string
   meta?: string
   description: string
   tags?: string[]
   href: string
   externalHref?: string
+  externalLabel?: string
 }
 
-export function Card({ image, eyebrow, title, meta, description, tags, href, externalHref }: CardProps) {
+export function Card({ image, eyebrow, title, meta, description, tags, href, externalHref, externalLabel = 'GitHub' }: CardProps) {
   return (
     <article className={`card${image ? ' card--project' : ' card--experience'}`} data-reveal>
       {image && <a className="card-image" href={href}><img src={image} alt="" /></a>}
       <div className="card-content">
-        <div className="card-heading"><p className="card-eyebrow">{eyebrow}</p>{meta && <span className="card-meta">{meta}</span>}</div>
+        {(eyebrow || meta) && <div className="card-heading">{eyebrow && <p className="card-eyebrow">{eyebrow}</p>}{meta && <span className="card-meta">{meta}</span>}</div>}
         <h3>{title}</h3>
         <p className="card-description">{description}</p>
-        {tags && <TagList items={tags} className="card-tags" />}<div className="card-footer"><a className="read-more" href={href}>Read More <Icon name="arrow" size={15} /></a>{externalHref && <a className="external-link" href={externalHref} aria-label={`GitHub link for ${title}`}><Icon name="github" size={16} /><span>GitHub</span></a>}</div>
+        {tags && <TagList items={tags} className="card-tags" />}<div className="card-footer"><a className="read-more" href={href}>Read More <Icon name="arrow" size={15} /></a>{externalHref && <a className="external-link" href={externalHref} target={externalHref.startsWith('http') ? '_blank' : undefined} rel={externalHref.startsWith('http') ? 'noreferrer' : undefined} aria-label={`${externalLabel} for ${title}`}><Icon name={externalLabel === 'GitHub' ? 'github' : 'arrow'} size={16} /><span>{externalLabel}</span></a>}</div>
       </div>
     </article>
   )
