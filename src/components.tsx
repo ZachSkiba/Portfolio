@@ -16,6 +16,7 @@ export function TagList({ items, className = '' }: { items: string[]; className?
 
 type CardProps = {
   image?: string
+  imageFit?: 'cover' | 'contain'
   eyebrow?: string
   title: string
   meta?: string
@@ -26,15 +27,17 @@ type CardProps = {
   externalLabel?: string
 }
 
-export function Card({ image, eyebrow, title, meta, description, tags, href, externalHref, externalLabel = 'GitHub' }: CardProps) {
+export function Card({ image, imageFit = 'cover', eyebrow, title, meta, description, tags, href, externalHref, externalLabel = 'GitHub' }: CardProps) {
+  const hrefIsExternal = href.startsWith('http')
+  const hrefProps = hrefIsExternal ? { target: '_blank' as const, rel: 'noreferrer' } : {}
   return (
     <article className={`card${image ? ' card--project' : ' card--experience'}`} data-reveal>
-      {image && <a className="card-image" href={href}><img src={image} alt="" /></a>}
+      {image && <a className={`card-image${imageFit === 'contain' ? ' card-image--contain' : ''}`} href={href} {...hrefProps}><img src={image} alt="" /></a>}
       <div className="card-content">
         {(eyebrow || meta) && <div className="card-heading">{eyebrow && <p className="card-eyebrow">{eyebrow}</p>}{meta && <span className="card-meta">{meta}</span>}</div>}
         <h3>{title}</h3>
         <p className="card-description">{description}</p>
-        {tags && <TagList items={tags} className="card-tags" />}<div className="card-footer"><a className="read-more" href={href}>Read More <Icon name="arrow" size={15} /></a>{externalHref && <a className="external-link" href={externalHref} target={externalHref.startsWith('http') ? '_blank' : undefined} rel={externalHref.startsWith('http') ? 'noreferrer' : undefined} aria-label={`${externalLabel} for ${title}`}><Icon name={externalLabel === 'GitHub' ? 'github' : 'arrow'} size={16} /><span>{externalLabel}</span></a>}</div>
+        {tags && <TagList items={tags} className="card-tags" />}<div className="card-footer"><a className="read-more" href={href} {...hrefProps}>Read More <Icon name="arrow" size={15} /></a>{externalHref && <a className="external-link" href={externalHref} target={externalHref.startsWith('http') ? '_blank' : undefined} rel={externalHref.startsWith('http') ? 'noreferrer' : undefined} aria-label={`${externalLabel} for ${title}`}><Icon name={externalLabel === 'GitHub' ? 'github' : 'arrow'} size={16} /><span>{externalLabel}</span></a>}</div>
       </div>
     </article>
   )

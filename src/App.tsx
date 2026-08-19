@@ -3,7 +3,8 @@ import { Card, Icon, TagList } from './components'
 
 const projects = [
   {
-    image: './placeholder-project-1.svg',
+    image: './retail-prophet-forecast.png',
+    imageFit: 'contain' as const,
     title: 'Retail Demand Forecasting',
     description: 'An in-progress retail demand forecasting and inventory decision-support system built on the M5 Walmart dataset.',
     tags: ['Python', 'LightGBM', 'Forecasting'],
@@ -19,24 +20,53 @@ const projects = [
     externalLabel: 'Live app',
   },
   {
-    image: './placeholder-project-3.svg',
-    eyebrow: 'Machine learning',
-    title: 'Diabetes Prediction',
-    description: 'An interpretable classification model exploring the signals behind diabetes risk.',
-    tags: ['Python', 'scikit-learn', 'Jupyter'],
+    image: './diabetes-shap-summary.svg',
+    title: 'Diabetes Classification',
+    description: 'A team-led classification study using CDC survey data, Logistic Regression, XGBoost, and SHAP interpretability.',
+    tags: ['R', 'XGBoost', 'SHAP'],
     href: './projects/diabetes-prediction.html',
-    externalHref: '#contact',
+    externalHref: 'https://github.com/ZachSkiba/CSP571-G7',
+    externalLabel: 'GitHub',
+  },
+  {
+    image: './ab-test-power-sample.png',
+    title: 'A/B Test Efficiency',
+    description: 'A causal-inference study testing whether CUPED can preserve confidence while reducing the users required for an experiment.',
+    tags: ['Python', 'CUPED', 'Causal Inference'],
+    href: './projects/ab-test-efficiency.html',
+    externalHref: 'https://github.com/ZachSkiba/A-B-Test-Efficiency',
+    externalLabel: 'GitHub',
+  },
+  {
+    image: './airline-overbooking-revenue.svg',
+    imageFit: 'contain' as const,
+    title: 'Airline Overbooking Optimization',
+    description: 'A probabilistic revenue model balancing no-show behavior, compensation costs, and long-term customer loyalty.',
+    tags: ['Python', 'Monte Carlo', 'Optimization'],
+    href: './projects/airline-overbooking.html',
+    externalHref: 'https://github.com/ZachSkiba/Airline-Overbooking',
+    externalLabel: 'GitHub',
+  },
+  {
+    image: './premier-league-goals-rank.png',
+    imageFit: 'contain' as const,
+    title: 'Exploratory Data Analysis',
+    description: 'Two notebook-based analyses: Superstore retail orders and Premier League match results, connected by a focus on cleaning, aggregation, and clear data storytelling.',
+    tags: ['Python', 'pandas', 'EDA'],
+    href: './projects/data-analysis-eda.html',
+    externalHref: 'https://github.com/ZachSkiba/Data-Analysis-Projects',
+    externalLabel: 'GitHub',
   },
 ]
 
-const coursework = ['Probability & Statistics', 'Linear Algebra', 'Calculus', 'Machine Learning', 'Database Systems', 'Data Mining', 'Optimization', 'Statistical Modeling']
+const coursework = ['Machine Learning', 'Regression', 'Statistics', 'Probability', 'Data Preparation and Analysis', 'Data Mining', 'Big Data Technologies', 'Database Organization', 'Time Series', 'Data Structures and Algorithms', 'Agentic AI', 'Innovation with AI']
 
 function SocialLinks() {
   return (
     <div className="social-links" aria-label="Social links">
-      <a href="#contact" aria-label="GitHub"><Icon name="github" size={18} /></a>
-      <a href="#contact" aria-label="LinkedIn"><Icon name="linkedin" size={18} /></a>
-      <a href="mailto:hello@zach.build" aria-label="Email"><Icon name="mail" size={18} /></a>
+      <a href="https://github.com/ZachSkiba" target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="github" size={18} /></a>
+      <a href="http://www.linkedin.com/in/zachary-skiba-727490293" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Icon name="linkedin" size={18} /></a>
+      <a href="mailto:zskiba@hawk.illinoistech.edu" aria-label="Email"><Icon name="mail" size={18} /></a>
     </div>
   )
 }
@@ -83,13 +113,13 @@ function App() {
 
         <section className="content-section content-section--education education-section" id="education">
           <div className="section-header"><h2>Education</h2></div>
-          <div className="education-block" data-reveal><div><h3>Master of Science in Data Science</h3><p className="education-school">[University Name]</p></div><div className="education-meta"><span>2024 — Present</span><p>Applied Mathematics background with a focus on data-driven decisions, predictive modeling, and machine learning.</p></div></div>
+          <div className="education-block" data-reveal><div><p className="education-school">Illinois Institute of Technology</p><h3 className="education-degree">B.S. Applied Mathematics<br />M.S. Data Science</h3><p className="education-school">Minor in Computer Science | Coterminal Program</p></div><div className="education-meta"><span>August 2023 - December 2027</span><strong className="education-gpa">GPA: 3.5</strong></div></div>
           <div className="coursework-subsection" id="coursework" data-reveal><h3>Coursework</h3><div><TagList items={coursework} className="coursework-list" /></div></div>
         </section>
 
       </main>
 
-      <footer className="site-footer section-wrap" id="contact"><a className="footer-name" href="#top">Zach Skiba</a><a className="footer-email" href="mailto:hello@zach.build">hello@zach.build</a><SocialLinks /><span className="footer-year">© 2026</span></footer>
+      <footer className="site-footer section-wrap" id="contact"><a className="footer-name" href="#top">Zach Skiba</a><a className="footer-email" href="mailto:zskiba@hawk.illinoistech.edu">zskiba@hawk.illinoistech.edu</a><SocialLinks /><span className="footer-year">© 2026</span></footer>
     </div>
   )
 }
