@@ -8,3 +8,15 @@ dist/
 .idea/
 Thumbs.db
 .DS_Store
+
+# Private AI/project working notes
+PROJECT_CONTEXT.md
+
+# Keep raw project media and source exports out of the public repository.
+# Optimized assets in public/ are intentionally tracked because the site uses them.
+screenshots/
+**/screenshots/
+raw-screenshots/
+**/raw-screenshots/
+*.pdf
+*.ipynb
