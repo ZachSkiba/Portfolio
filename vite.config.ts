@@ -16,6 +16,8 @@ export default defineConfig({
         dataAnalysisEda: 'projects/data-analysis-eda.html',
         dexcom: 'experience/dexcom.html',
         itBusinessAnalyst: 'experience/it-business-analyst.html',
+        tripleThreatServices: 'experience/triple-threat-services.html',
+        runnings: 'experience/runnings.html',
       },
     },
   },

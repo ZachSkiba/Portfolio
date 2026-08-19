@@ -53,6 +53,45 @@
 @media (max-width: 850px) { .retail-dashboard-title { align-items: start; flex-direction: column; gap: 20px; }.retail-phase { text-align: left; }.retail-metrics-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .retail-dashboard { padding: 58px 0 75px; }.retail-dashboard-title h1 { font-size: 38px; }.retail-dashboard-title p { font-size: 12px; }.retail-metrics-grid, .retail-breakthrough-grid { grid-template-columns: 1fr; }.retail-metric-card { min-height: 120px; }.retail-dashboard-section-title { align-items: start; flex-wrap: wrap; }.retail-dashboard-section-title::after { flex-basis: 100%; }.retail-dashboard-section-title span { margin-left: 0; }.retail-dashboard-card { padding: 20px; }.retail-roadmap { padding: 23px 20px 8px; } }
 
+/* International Motors experience page */
+.international-page { --international-ink: #202423; --international-muted: #666963; }
+.international-dashboard { padding-bottom: 18px; }
+.international-dashboard .retail-dashboard-title p { color: var(--international-muted); }
+.international-delivery-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+.international-ownership-card { padding: 26px; }
+.international-ownership-card > p { max-width: 920px; }
+@media (max-width: 850px) { .international-delivery-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .international-delivery-grid { grid-template-columns: 1fr; }.international-ownership-card { padding: 20px; } }
+
+/* Dexcom experience page */
+.dexcom-page { --dexcom-ink: #202423; --dexcom-muted: #666963; }
+.dexcom-dashboard { padding-bottom: 18px; }
+.dexcom-dashboard .retail-dashboard-title p { color: var(--dexcom-muted); }
+.dexcom-delivery-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+.dexcom-ownership-card { padding: 26px; }
+.dexcom-ownership-card > p { max-width: 920px; }
+@media (max-width: 850px) { .dexcom-delivery-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .dexcom-delivery-grid { grid-template-columns: 1fr; }.dexcom-ownership-card { padding: 20px; } }
+
+/* Triple Threat Services and Runnings experience pages */
+.triple-threat-page { --triple-threat-muted: #666963; }
+.triple-threat-dashboard, .runnings-dashboard { padding-bottom: 18px; }
+.triple-threat-dashboard .retail-dashboard-title p, .runnings-dashboard .retail-dashboard-title p { color: var(--triple-threat-muted); }
+.triple-threat-overview { display: grid; gap: 85px; grid-template-columns: 1fr 1fr; margin-bottom: 70px; }
+.triple-threat-overview h2 { color: var(--ink); font-size: 27px; font-weight: 600; letter-spacing: -.06em; line-height: 1.1; margin: 0 0 17px; max-width: 390px; }
+.triple-threat-overview > div { display: flex; flex-direction: column; }
+.triple-threat-overview p:not(.triple-threat-label) { color: var(--muted); font-size: 13px; line-height: 1.75; margin: 0; max-width: 470px; }
+.triple-threat-label { color: var(--coral); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .1em; margin: 0 0 18px; text-transform: uppercase; }
+.triple-threat-overview .experience-project-link { align-self: flex-start; margin-top: 23px; }
+.triple-threat-product { max-width: 850px; }
+.triple-threat-product p { color: var(--muted); font-size: 13px; line-height: 1.75; margin: 0; max-width: 720px; }
+.triple-threat-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; margin-top: 23px; }
+.experience-project-link { align-items: center; background: var(--coral); border: 1px solid var(--coral); border-radius: 5px; color: #fff; display: inline-flex; font-size: 11px; font-weight: 700; gap: 11px; justify-content: center; min-height: 42px; padding: 10px 15px; transition: background .2s ease, transform .2s ease; white-space: nowrap; }
+.experience-project-link:hover { background: #c95f46; transform: translateY(-2px); }
+.runnings-summary-section { margin-bottom: 0; }
+.runnings-summary-section .retail-dashboard-card { max-width: 900px; }
+@media (max-width: 600px) { .triple-threat-overview { display: block; margin-bottom: 58px; }.triple-threat-overview > div + div { margin-top: 45px; }.triple-threat-overview h2 { font-size: 24px; } }
+
 /* Readability and compact spacing for the reference-matched Retail page */
 .retail-dashboard { padding-top: 34px; padding-bottom: 18px; }
 .retail-dashboard-header { margin-bottom: 29px; padding-bottom: 28px; }

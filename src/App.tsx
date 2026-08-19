@@ -66,7 +66,7 @@ function SocialLinks() {
     <div className="social-links" aria-label="Social links">
       <a href="https://github.com/ZachSkiba" target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="github" size={18} /></a>
       <a href="http://www.linkedin.com/in/zachary-skiba-727490293" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Icon name="linkedin" size={18} /></a>
-      <a href="mailto:zskiba@hawk.illinoistech.edu" aria-label="Email"><Icon name="mail" size={18} /></a>
+      <a href="https://outlook.office.com/mail/deeplink/compose?to=zskiba%40hawk.illinoistech.edu&subject=Portfolio%20inquiry" target="_blank" rel="noreferrer" aria-label="Email Zach"><Icon name="mail" size={18} /></a>
     </div>
   )
 }
@@ -101,8 +101,12 @@ function App() {
         <section className="content-section content-section--experience" id="experience">
           <div className="section-header"><h2>Experience</h2></div>
           <div className="card-grid experience-grid">
-            <Card eyebrow="Dexcom" title="Business Intelligence Intern" meta="2024 — 2025" description="Worked with data and operations teams to turn business questions into clear analytical stories." href="./experience/dexcom.html" />
-            <Card eyebrow="Information Technology" title="IT Business Analyst Intern" meta="2023 — 2024" description="Built a foundation in systems thinking, process improvement, and the human side of technical work." href="./experience/it-business-analyst.html" />
+            <Card eyebrow="Dexcom" title="Business Intelligence Intern" meta="May - Aug 2026" description="Proposed and built an explainable BigQuery ML retention framework, reusable SQL analysis tooling, and AI-ready datasets for two customer-insights bots." href="./experience/dexcom.html" />
+            <Card eyebrow="International Motors" title="IT Business Analyst Intern" meta="May - Aug 2025" description="Replaced manual Excel project governance with production ServiceNow dashboards, automated alerts, and cost reporting across 100+ active projects." href="./experience/it-business-analyst.html" />
+          </div>
+          <div className="card-grid experience-grid experience-grid--secondary">
+            <Card eyebrow="Triple Threat Services" title="Business Owner & Co-Founder" meta="May 2024 - Jun 2026" description="Founded a mobile car-detailing business with my brothers, helped grow it to a 40+ client base, and built TriXpense under the same brand." href="./experience/triple-threat-services.html" externalHref="https://www.triplethreatservices.com/" externalLabel="Business site" />
+            <Card eyebrow="Runnings" title="Sales Associate" meta="Jun 2021 - Aug 2023" description="Supported customers, inventory operations, store remodeling, and daily retail execution in a part-time role." href="./experience/runnings.html" />
           </div>
         </section>
 
@@ -119,7 +123,7 @@ function App() {
 
       </main>
 
-      <footer className="site-footer section-wrap" id="contact"><a className="footer-name" href="#top">Zach Skiba</a><a className="footer-email" href="mailto:zskiba@hawk.illinoistech.edu">zskiba@hawk.illinoistech.edu</a><SocialLinks /><span className="footer-year">© 2026</span></footer>
+      <footer className="site-footer section-wrap" id="contact"><a className="footer-name" href="#top">Zach Skiba</a><a className="footer-email" href="https://outlook.office.com/mail/deeplink/compose?to=zskiba%40hawk.illinoistech.edu&subject=Portfolio%20inquiry" target="_blank" rel="noreferrer">zskiba@hawk.illinoistech.edu</a><SocialLinks /><span className="footer-year">© 2026</span></footer>
     </div>
   )
 }

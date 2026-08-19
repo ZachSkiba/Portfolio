@@ -18,8 +18,10 @@ const details: Record<string, DetailData> = {
   'ab-test-efficiency': { type: 'Project', eyebrow: 'Causal inference', title: 'A/B Test Efficiency', meta: '2026 / Completed study', description: 'A CUPED and regression-adjustment study using a real randomized email experiment and Monte Carlo simulation to evaluate more efficient experimentation.', tags: ['Python', 'CUPED', 'Causal inference'], image: '../ab-test-power-sample.png', repoLabel: 'View repository' },
   'airline-overbooking': { type: 'Project', eyebrow: 'Applied mathematics', title: 'Airline Overbooking Optimization', meta: '2025 / Completed study', description: 'A probabilistic modeling and Monte Carlo simulation study finding revenue-maximizing overbooking rates while accounting for compensation and customer-loyalty costs.', tags: ['Python', 'Monte Carlo', 'Optimization'], image: '../airline-overbooking-revenue.svg', repoLabel: 'View repository' },
   'data-analysis-eda': { type: 'Project', eyebrow: 'Analytics', title: 'Exploratory Data Analysis', meta: '2025 / Completed analyses', description: 'Two Python notebook analyses covering Superstore retail transactions and Premier League match data.', tags: ['Python', 'pandas', 'EDA'], image: '../premier-league-goals-rank.png', repoLabel: 'View repository' },
-  dexcom: { type: 'Experience', eyebrow: 'Dexcom', title: 'Business Intelligence Intern', meta: '2024 — 2025', description: 'Worked with data and operations teams to turn business questions into clear analytical stories. This page is a placeholder for the projects, responsibilities, and outcomes from the internship.', tags: ['Business intelligence', 'Analytics', 'Data'], repoLabel: 'Back to portfolio' },
-  'it-business-analyst': { type: 'Experience', eyebrow: 'Information Technology', title: 'IT Business Analyst Intern', meta: '2023 — 2024', description: 'Built a foundation in systems thinking, process improvement, and the human side of technical work. This page is a placeholder for the role details and selected work.', tags: ['Business analysis', 'Systems', 'Process'], repoLabel: 'Back to portfolio' },
+  dexcom: { type: 'Experience', eyebrow: 'Dexcom', title: 'Business Intelligence Intern', meta: 'May - Aug 2026', description: 'Proposed and built an explainable BigQuery ML retention framework, reusable SQL analysis tooling, and AI-ready datasets for two customer-insights bots.', tags: ['SQL', 'BigQuery ML', 'Tableau'], repoLabel: 'Back to portfolio' },
+  'it-business-analyst': { type: 'Experience', eyebrow: 'International Motors', title: 'IT Business Analyst Intern', meta: 'May - Aug 2025', description: 'Replaced manual Excel project governance with production ServiceNow dashboards, automated alerts, and cost reporting across 100+ active projects.', tags: ['ServiceNow', 'Automation', 'Business analysis'], repoLabel: 'Back to portfolio' },
+  'triple-threat-services': { type: 'Experience', eyebrow: 'Triple Threat Services', title: 'Business Owner & Co-Founder', meta: 'May 2024 - Jun 2026', description: 'Co-founded and operated a service business while building its customer base, brand, operations, and companion product strategy.', tags: ['Entrepreneurship', 'Operations', 'Product strategy'], repoLabel: 'Back to portfolio' },
+  runnings: { type: 'Experience', eyebrow: 'Runnings', title: 'Sales Associate', meta: 'Jun 2021 - Aug 2023', description: 'Supported customers, inventory operations, store remodeling, and daily retail execution in a part-time role.', tags: ['Customer service', 'Inventory', 'Teamwork'], repoLabel: 'Back to portfolio' },
 }
 
 function DiabetesClassificationPage() {
@@ -157,6 +159,102 @@ function RetailForecastPage() {
   )
 }
 
+function InternationalMotorsPage() {
+  const backHref = '../index.html'
+  return (
+    <div className="site-shell detail-shell international-page">
+      <header className="detail-header section-wrap"><a className="footer-name" href={backHref}>Zach Skiba</a><a className="back-link" href={backHref}>&larr; Back to portfolio</a></header>
+      <main className="retail-dashboard section-wrap international-dashboard">
+        <header className="retail-dashboard-header">
+          <div className="retail-dashboard-title"><div><h1>IT Business Analyst Intern</h1><p>International Motors (formerly Navistar) &middot; IT / PMO</p></div></div>
+          <div className="retail-badge-container"><span className="retail-badge retail-badge-status"><i /> Completed experience</span><span className="retail-badge">May - Aug 2025</span><span className="retail-badge">12-week internship</span><span className="retail-badge">Individual contributor</span></div>
+        </header>
+
+        <section className="retail-metrics-grid" aria-label="Role impact metrics"><div className="retail-metric-card retail-metric-card--coral"><span>Production initiatives</span><strong>4</strong><small>Designed, shipped, and documented</small></div><div className="retail-metric-card retail-metric-card--slate"><span>Portfolio scale</span><strong>100+</strong><small>Active projects covered</small></div><div className="retail-metric-card retail-metric-card--sage"><span>Manual effort removed</span><strong>20+ hrs/mo</strong><small>Estimated, self-reported impact</small></div><div className="retail-metric-card"><span>Knowledge transfer</span><strong>8 + 1</strong><small>Knowledge articles + training video</small></div></section>
+
+        <section className="retail-dashboard-section"><h2 className="retail-dashboard-section-title">Business impact</h2><div className="retail-breakthrough-grid"><article className="retail-dashboard-card"><h3>Replaced manual project governance</h3><p>Rebuilt a spreadsheet-driven PMO process inside ServiceNow with color-coded gate tracking, a project-health dashboard, and proactive alerts for overdue milestones and missing status reports.</p><div className="retail-callout"><strong>Operational result</strong><p>Project managers and IT leadership gained a shared view of project health instead of relying on manually updated Excel files.</p></div></article><article className="retail-dashboard-card"><h3>Built financial visibility</h3><p>Designed a planned-vs-actual cost dashboard backed by a custom data pipeline. Cleaned and modeled a 60,000+ row, 30+ column dataset and aggregated project financials by fiscal year.</p><div className="retail-callout retail-callout--sage"><strong>Architecture judgment</strong><p>When a custom-table design exceeded platform limits, partnered with a senior developer to pivot to existing-table flag columns and still meet the production deadline.</p></div></article></div></section>
+
+        <section className="retail-dashboard-section"><h2 className="retail-dashboard-section-title">What shipped</h2><div className="international-delivery-grid"><article className="retail-dashboard-card"><h3>Project health tracking</h3><p>Gate-status indicators, field styling, and a late-projects view turned project governance into a live operational system.</p></article><article className="retail-dashboard-card"><h3>Automated oversight</h3><p>Three email workflows covered upcoming milestones, late milestones, and late status reports using dynamic triggers, fallback logic, and branded HTML.</p></article><article className="retail-dashboard-card"><h3>Planned vs. actual costs</h3><p>A production dashboard surfaced cost rollups and KPIs across the active project portfolio, including automated updates to 200+ project records.</p></article></div></section>
+
+        <section className="retail-dashboard-section"><h2 className="retail-dashboard-section-title">Ownership &amp; delivery</h2><article className="retail-dashboard-card international-ownership-card"><p>Owned the full delivery cycle as the sole builder: requirements and design, ServiceNow scripting, testing, Dev-to-Test-to-Production promotion through Update Sets, executive demos, and documentation. The work was approved at milestone reviews, then handed off through eight published Knowledge Base articles, a six-minute training video, and an expo presentation.</p><div className="retail-callout retail-callout--sage"><strong>Full lifecycle ownership</strong><p>Four initiatives moved from a manual business need to production systems within a fixed 12-week internship.</p></div></article></section>
+
+        <section className="retail-dashboard-section retail-tech-section"><h2 className="retail-dashboard-section-title">Technology</h2><div className="retail-tech-stack"><TagList items={['ServiceNow', 'JavaScript', 'GlideRecord', 'GlideDateTime', 'GlideAggregate', 'Power BI', 'DAX', 'Power Query', 'HTML', 'Update Sets']} /></div><p className="retail-private-note">Internal platform details and company data have been generalized for public portfolio use. No public repository or demo is available for this work.</p></section>
+      </main>
+      <footer className="site-footer section-wrap"><a className="footer-name" href={backHref}>Zach Skiba</a><span className="footer-year">© 2026</span></footer>
+    </div>
+  )
+}
+
+function DexcomPage() {
+  const backHref = '../index.html'
+  return (
+    <div className="site-shell detail-shell dexcom-page">
+      <header className="detail-header section-wrap"><a className="footer-name" href={backHref}>Zach Skiba</a><a className="back-link" href={backHref}>&larr; Back to portfolio</a></header>
+      <main className="retail-dashboard section-wrap dexcom-dashboard">
+        <header className="retail-dashboard-header">
+          <div className="retail-dashboard-title"><div><h1>Business Intelligence Intern</h1><p>Dexcom &middot; IT Data &amp; Analytics</p></div></div>
+          <div className="retail-badge-container"><span className="retail-badge retail-badge-status"><i /> Completed experience</span><span className="retail-badge">May - Aug 2026</span><span className="retail-badge">12-week internship</span></div>
+        </header>
+
+        <section className="retail-metrics-grid" aria-label="Role impact metrics"><div className="retail-metric-card retail-metric-card--coral"><span>Retention cohort</span><strong>330K+</strong><small>Users represented in the modeling framework</small></div><div className="retail-metric-card retail-metric-card--slate"><span>Controlled analyses</span><strong>10</strong><small>Signal analyses completed personally</small></div><div className="retail-metric-card retail-metric-card--sage"><span>AI-ready datasets</span><strong>20+</strong><small>Built for two Customer Insights bots</small></div><div className="retail-metric-card"><span>Metadata standardized</span><strong>1,000+</strong><small>BigQuery columns documented</small></div></section>
+
+        <section className="retail-dashboard-section"><h2 className="retail-dashboard-section-title">Retention modeling</h2><div className="retail-breakthrough-grid"><article className="retail-dashboard-card"><h3>Proposed and built the framework</h3><p>Identified a limitation in the team's univariate retention analysis and proposed a controlled multivariate approach. Built a reusable BigQuery ML architecture with standardized features, cohort definitions, retention outcomes, and leakage controls across a 330K+ user cohort.</p><div className="retail-callout"><strong>Independent initiative</strong><p>Built the case for the project, validated the approach with data science partners, and earned approval to take it from concept through handoff.</p></div></article><article className="retail-dashboard-card"><h3>Compared controlled and univariate analysis</h3><p>Engineered 25 Month-0 features and built three progressively controlled BigQuery ML logistic regression models to compare multivariate results with the team's semi-automated univariate signal analyses.</p><div className="retail-callout retail-callout--sage"><strong>Explainability by design</strong><p>Used logistic regression so odds ratios, confidence intervals, and feature effects could be interpreted by a business audience rather than hidden inside a black-box model.</p></div></article></div></section>
+
+        <section className="retail-dashboard-section"><h2 className="retail-dashboard-section-title">Analytics, AI &amp; automation</h2><div className="dexcom-delivery-grid"><article className="retail-dashboard-card"><h3>Reusable analytics framework</h3><p>Designed user-level datasets and parameterized BigQuery SQL templates that standardized cohort-based retention analyses. Completed 10 controlled signal analyses personally while the reusable framework supported 20+ analyses across the team.</p></article><article className="retail-dashboard-card"><h3>AI-ready data foundations</h3><p>Engineered 20+ quantitative datasets for two Customer Insights Copilot bots, using 21 BigQuery SQL scripts and standardized 23-tab Excel workbooks to give the bots structured business data.</p></article><article className="retail-dashboard-card"><h3>Semi-automated metadata workflow</h3><p>Built SQL discovery queries, AI-assisted content generation, and dynamic SQL updates to standardize documentation across 1,000+ BigQuery columns.</p></article></div></section>
+
+        <section className="retail-dashboard-section"><h2 className="retail-dashboard-section-title">Business intelligence &amp; delivery</h2><article className="retail-dashboard-card dexcom-ownership-card"><p>Modernized two enterprise Tableau KPI dashboards, including new-product reporting, unified complaint data, and a redesigned dashboard tab with new filtering and visualizations. Worked as an individual contributor across four workstreams, authored 40+ SQL scripts, completed 24 Jira stories, and paired builds with documentation for handoff across 15+ Confluence pages and two capstone presentations.</p><div className="retail-callout retail-callout--sage"><strong>Documentation-driven delivery</strong><p>Built documentation alongside the work so analytical definitions, datasets, and workflows could be reused by the next analyst rather than remaining one-off project knowledge.</p></div></article></section>
+
+        <section className="retail-dashboard-section retail-tech-section"><h2 className="retail-dashboard-section-title">Technology</h2><div className="retail-tech-stack"><TagList items={['SQL', 'BigQuery', 'BigQuery ML', 'Tableau', 'dbt', 'Jinja', 'Excel', 'Power Query', 'Copilot Studio', 'Confluence', 'Jira']} /></div><p className="retail-private-note">Internal platform details, customer data, and company workbooks have been generalized for public portfolio use. No public repository or demo is available for this work.</p></section>
+      </main>
+      <footer className="site-footer section-wrap"><a className="footer-name" href={backHref}>Zach Skiba</a><span className="footer-year">© 2026</span></footer>
+    </div>
+  )
+}
+
+function TripleThreatServicesPage() {
+  const backHref = '../index.html'
+  return (
+    <div className="site-shell detail-shell triple-threat-page">
+      <header className="detail-header section-wrap"><a className="footer-name" href={backHref}>Zach Skiba</a><a className="back-link" href={backHref}>&larr; Back to portfolio</a></header>
+      <main className="retail-dashboard section-wrap triple-threat-dashboard">
+        <header className="retail-dashboard-header">
+          <div className="retail-dashboard-title"><div><h1>Business Owner &amp; Co-Founder</h1><p>Triple Threat Services &middot; Founder-led operations and product strategy</p></div></div>
+          <div className="retail-badge-container"><span className="retail-badge retail-badge-status"><i /> Entrepreneurial experience</span><span className="retail-badge">May 2024 - Jun 2026</span><span className="retail-badge">Co-founder</span><span className="retail-badge">40+ client base</span></div>
+        </header>
+
+        <section className="retail-dashboard-section triple-threat-overview"><div><p className="triple-threat-label">The business</p><h2>Mobile car detailing founded with my brothers.</h2><p>Triple Threat Services is a local, customer-focused car-detailing business. We built the client base through reliable service, clear communication, and consistent follow-through.</p></div><div><p className="triple-threat-label">My role</p><p>Helped run the business, manage customer relationships and operations, support marketing, and make decisions as the company grew. The experience taught me how to take ownership when there is no predefined playbook.</p><a className="experience-project-link" href="https://www.triplethreatservices.com/" target="_blank" rel="noreferrer">Visit Triple Threat Services <Icon name="arrow" size={16} /></a></div></section>
+
+        <section className="retail-dashboard-section"><h2 className="retail-dashboard-section-title">TriXpense</h2><div className="triple-threat-product"><p>We also co-founded and engineered TriXpense, a full-stack financial analytics platform for personal and group expense management. Its technical implementation and product evidence are covered on the dedicated project page.</p><div className="triple-threat-actions"><a className="experience-project-link" href="../projects/roommate-expense-tracker.html">View the TriXpense project <Icon name="arrow" size={16} /></a></div></div></section>
+
+        <section className="retail-dashboard-section retail-tech-section"><h2 className="retail-dashboard-section-title">Capabilities</h2><div className="retail-tech-stack"><TagList items={['Entrepreneurship', 'Operations', 'Customer experience', 'Product strategy', 'Brand building', 'Cross-functional leadership']} /></div></section>
+      </main>
+      <footer className="site-footer section-wrap"><a className="footer-name" href={backHref}>Zach Skiba</a><span className="footer-year">© 2026</span></footer>
+    </div>
+  )
+}
+
+function RunningsPage() {
+  const backHref = '../index.html'
+  return (
+    <div className="site-shell detail-shell runnings-page">
+      <header className="detail-header section-wrap"><a className="footer-name" href={backHref}>Zach Skiba</a><a className="back-link" href={backHref}>&larr; Back to portfolio</a></header>
+      <main className="retail-dashboard section-wrap runnings-dashboard">
+        <header className="retail-dashboard-header">
+          <div className="retail-dashboard-title"><div><h1>Sales Associate</h1><p>Runnings &middot; Retail operations</p></div></div>
+          <div className="retail-badge-container"><span className="retail-badge retail-badge-status"><i /> Completed experience</span><span className="retail-badge">Jun 2021 - Aug 2023</span><span className="retail-badge">Part-time</span><span className="retail-badge">On-site</span></div>
+        </header>
+
+        <section className="retail-metrics-grid" aria-label="Role focus"><div className="retail-metric-card retail-metric-card--coral"><span>Customer support</span><strong>Daily</strong><small>Orders, questions, and service</small></div><div className="retail-metric-card retail-metric-card--slate"><span>Inventory</span><strong>Floor</strong><small>Stocking and product availability</small></div><div className="retail-metric-card retail-metric-card--sage"><span>Store projects</span><strong>Remodel</strong><small>Team coordination and deadlines</small></div><div className="retail-metric-card"><span>Work style</span><strong>Adaptable</strong><small>Balanced day and night shifts</small></div></section>
+
+        <section className="retail-dashboard-section runnings-summary-section"><h2 className="retail-dashboard-section-title">Role summary</h2><article className="retail-dashboard-card"><p>Supported customers with orders and product questions, maintained inventory through stocking, and helped lead a store remodeling project to meet deadlines and improve the overall layout. The role strengthened customer service, teamwork, time management, and reliable execution in a fast-moving retail environment.</p></article></section>
+
+        <section className="retail-dashboard-section retail-tech-section"><h2 className="retail-dashboard-section-title">Transferable skills</h2><div className="retail-tech-stack"><TagList items={['Customer service', 'Inventory operations', 'Team collaboration', 'Store execution', 'Time management', 'Adaptability']} /></div></section>
+      </main>
+      <footer className="site-footer section-wrap"><a className="footer-name" href={backHref}>Zach Skiba</a><span className="footer-year">© 2026</span></footer>
+    </div>
+  )
+}
+
 export default function DetailPage({ slug }: { slug: string }) {
   if (slug === 'retail-demand-forecasting') return <RetailForecastPage />
   if (slug === 'roommate-expense-tracker') return <TriXpensePage />
@@ -164,6 +262,10 @@ export default function DetailPage({ slug }: { slug: string }) {
   if (slug === 'ab-test-efficiency') return <ABTestEfficiencyPage />
   if (slug === 'airline-overbooking') return <AirlineOverbookingPage />
   if (slug === 'data-analysis-eda') return <DataAnalysisEdaPage />
+  if (slug === 'dexcom') return <DexcomPage />
+  if (slug === 'it-business-analyst') return <InternationalMotorsPage />
+  if (slug === 'triple-threat-services') return <TripleThreatServicesPage />
+  if (slug === 'runnings') return <RunningsPage />
   const data = details[slug] ?? details['retail-demand-forecasting']
   const backHref = '../index.html'
   return (
