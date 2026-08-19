@@ -91,6 +91,7 @@ function App() {
       <header className="identity section-wrap" id="top">
         <h1>Zach Skiba</h1>
         <p className="identity-role">Chicago, IL · MS Data Science</p>
+        <p className="identity-status">Seeking Summer 2027 Data Science &amp; Analytics Internships</p>
         <SocialLinks />
         <nav className="jump-links" aria-label="Page sections">
           <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#coursework">Coursework</a><a href="#education">Education</a><a href="#contact">Contact</a>
