@@ -61,7 +61,7 @@ const projects = [
   },
 ]
 
-const coursework = ['Machine Learning', 'Regression', 'Statistics', 'Probability', 'Data Preparation and Analysis', 'Data Mining', 'Big Data Technologies', 'Database Organization', 'Time Series', 'Data Structures and Algorithms', 'Agentic AI', 'Innovation with AI']
+const coursework = ['Machine Learning', 'Deep Learning', 'Data Science Practicum', 'Agentic AI', 'Regression', 'Statistics', 'Probability', 'Data Preparation and Analysis', 'Data Mining', 'Big Data Technologies', 'Database Organization', 'Time Series', 'Data Structures and Algorithms']
 
 function SocialLinks() {
   return (
